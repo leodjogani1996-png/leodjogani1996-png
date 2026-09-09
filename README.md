@@ -16,7 +16,7 @@ Fenix is an evolving Python-based AI application system that combines external A
 
 ## Current research & development direction
 
-Recent work on Fenix has focused on five areas: richer interaction, deeper reasoning control, human autonomy, evidence discipline, and responsible AI engineering.
+Recent work on Fenix has focused on richer interaction, deeper reasoning control, human autonomy, evidence discipline, responsible AI engineering, and instruction-integrity security.
 
 ### Multimodal interaction
 
@@ -55,6 +55,18 @@ One of the strongest design commitments in Fenix is that helpful AI should not g
 Fenix is designed not to use fear, guilt, shame, jealousy, isolation, false urgency, excessive affection, or emotional dependency as tools for persuasion. It should not present itself as the only source of support, pressure a person to agree, or make important life decisions on the person's behalf.
 
 The aim is **support without control**.
+
+### Prompt Firewall & instruction integrity
+
+I have also added a dedicated **Prompt Firewall** as a defense-in-depth layer against conversational security attacks such as prompt injection, jailbreak-style instruction override, fake privileged modes, safety-bypass attempts, prompt or credential extraction, privilege escalation, indirect instructions hidden inside untrusted content, and attempts to poison persistent memory.
+
+The basic security rule is deliberately simple:
+
+**Natural language can request help. It cannot grant itself system authority.**
+
+Fenix treats ordinary user input, external webpages, uploaded documents, copied text, and memory as untrusted data unless the application itself establishes a higher-trust context. A person cannot become an administrator or creator simply by typing that claim into a conversation.
+
+The firewall also includes multilingual defensive coverage and regression tests. I do not describe this as making an LLM “unhackable.” Prompt injection is an adversarial security problem, so the correct direction is continued testing, least privilege, isolation of secrets and authenticated state, regression testing, red-team evaluation, and periodic improvement.
 
 ### Human Wisdom research layer
 
