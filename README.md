@@ -14,6 +14,27 @@ If Fenix succeeds, its value will not be measured by how much a person needs it,
 
 Fenix is an evolving Python-based AI application system that combines external AI models with my own orchestration, safety, reasoning, memory, multimodal, identity, and interaction layers. It is not a separately trained foundation model, and I believe technical work should be described accurately rather than exaggerated.
 
+
+## Current development update — September 2026
+
+Over the latest development cycle, I have been moving Fenix from a browser-first prototype toward a more complete mobile application.
+
+Recent work includes:
+
+- building and testing the Android application shell with Expo and React Native;
+- adding secure email/password authentication and Google sign-in through Supabase;
+- implementing OAuth account selection, PKCE protection, redirect allowlisting, and a native app callback flow;
+- fixing the Android WebView-to-browser handoff after real-device testing exposed a login issue that did not appear in offline tests;
+- adding persistent voice dictation in the chat composer while keeping Live Voice as a separate realtime mode;
+- improving the Great Minds Library so historical figures are presented through documented facts, respectful narration, and clearly separated creator reflections rather than imitation;
+- updating the mobile branding with a dedicated adaptive Fenix icon designed for Android launchers;
+- strengthening automated validation with GitHub Actions, TypeScript checks, Android bundle smoke tests, core regression tests, and repeatable EAS preview APK builds;
+- keeping the production source repository private while using this public profile to document the direction, engineering principles, and progress of the project.
+
+One lesson from this phase has been especially important to me: a feature is not finished because it looks correct in code or in a screenshot. It has to survive real use, real devices, failures, regression tests, and another round of improvement.
+
+I am still learning, and I do not try to hide that. What matters to me is that the work keeps becoming more disciplined, more testable, and more honest about what is working and what still needs improvement.
+
 ## Current research & development direction
 
 Recent work on Fenix has focused on richer interaction, deeper reasoning control, human autonomy, evidence discipline, responsible AI engineering, and instruction-integrity security.
